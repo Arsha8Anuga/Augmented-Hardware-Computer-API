@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+
+# Laravel specific
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Environment and IDE
+.env
+.env.example
+.editorconfig
+.phpunit.result.cache
+.vscode/
+.idea/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yaml
+docker-compose.override.yml
+
+# Logs and OS files
+*.log
+.DS_Store
+Thmubs.db

@@ -30,3 +30,14 @@ Route::prefix('dashboard')->group(function () {
         ->where('path', '.*');
     
 });
+
+Route::get('/', function () {
+    $routes = collect(Route::getRoutes())->map(function ($route) {
+        return [
+            'uri' => $route->uri(),
+            'method' => $route->methods()[0]
+        ];
+    })->filter(fn($route) => str_contains($route['uri'], 'api/'));
+
+    return response()->json($routes->values());
+});

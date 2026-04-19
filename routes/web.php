@@ -20,3 +20,5 @@ Route::middleware('auth.custom')->group(function () {
     Route::get('/dashboard/{path?}', [DashboardController::class, 'index'])
     ->where('path', '.*');
 });
+
+Route::redirect('/', '/dashboard');
